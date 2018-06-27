@@ -36,7 +36,6 @@ public class KulkowyPanel extends JPanel{
             graf.fillOval(kule.x - kule.size/2, kule.y - kule.size/2, kule.size, kule.size);
         }
         graf.setColor(Color.white);
-        graf.drawLine(0, 200, 600, 200);
     }
 
     private class KulkiListener implements MouseListener, ActionListener//alt+enter
@@ -107,19 +106,13 @@ public class KulkowyPanel extends JPanel{
         public void update(){
             x+=xspeed;
             y+=yspeed;
-            if(x<size/2|| x>getWidth()-size/2){
+            if(x<size/2 || x>getWidth()-size/2){
                 xspeed*=(-1);
             }
             if(y<size/2 || y>getHeight()-size/2){
                 yspeed*=(-1);
             }
-            if(y>200-size/2 && y<200+size/2){
-                //  xspeed*=(-1);
-                yspeed*=(-1);
-            }
         }
-
-
     }
 
 }
